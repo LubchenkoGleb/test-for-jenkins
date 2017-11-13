@@ -1,3 +1,3 @@
 node {
-	cat "1.txt"
+	echo "1.txt"
 }
