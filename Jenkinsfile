@@ -1,11 +1,11 @@
 node {
-    def server = Artifactory.newServer url: SERVER_URL, credentialsId: CREDENTIALS
+//    def server = Artifactory.newServer url: SERVER_URL, credentialsId: CREDENTIALS
     def rtMaven = Artifactory.newMavenBuild()
     def buildInfo
 
-    stage ('Clone') {
-        git url: 'https://github.com/jfrogdev/project-examples.git'
-    }
+//    stage ('Clone') {
+//        git url: 'https://github.com/jfrogdev/project-examples.git'
+//    }
 
     stage ('Artifactory configuration') {
         rtMaven.tool = MAVEN_TOOL // Tool name from Jenkins configuration
