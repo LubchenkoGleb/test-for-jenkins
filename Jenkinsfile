@@ -14,7 +14,7 @@ pipeline {
 
         stage('Run') {
             steps {
-                sh 'ls'
+                sh 'java -jar target/test-1.5.8.RELEASE.jar'
             }
         }
     }
