@@ -14,9 +14,9 @@ pipeline {
 
         stage('Run') {
             steps {
-                sh 'java -jar target/test-1.5.8.RELEASE.jar'
-                //sh 'docker run -v /Users/shelajev/repo:/opt/repo -p 8080:8080 --rm dockerfile/java:oracle-java8 java -jar /opt/repo/tmp/gs-spring-boot/complete/target/gs-spring-boot-0.1.0.jar
                 sh 'ls'
+                sh 'java -jar target/test-1.5.8.RELEASE.jar'
+                sh 'docker run -v /target:/target --rm dockerfile/java:oracle-java8 java -jar /target/test-1.5.8.RELEASE.jar
             }
         }
     }
