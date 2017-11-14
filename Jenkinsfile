@@ -16,7 +16,7 @@ pipeline {
             steps {
                 sh 'ls'
                 sh 'java -jar target/test-1.5.8.RELEASE.jar'
-                sh 'docker run -v /target:/target --rm dockerfile/java:oracle-java8 java -jar /target/test-1.5.8.RELEASE.jar
+                sh 'docker run -v /target:/target --rm dockerfile/java:oracle-java8 java -jar /target/test-1.5.8.RELEASE.jar'
             }
         }
     }
